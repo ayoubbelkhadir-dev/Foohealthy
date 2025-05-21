@@ -1,0 +1,10 @@
+<mat-toolbar >
+    <span>Foohealty</span>
+    <span class="example-spacer"></span>
+   <!-- <button color="warn" (click)="toggleFavorites()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>{{ isFavoritesView ? 'favorite' : 'favorite_border' }}</mat-icon>
+    </button>-->
+    <button mat-button (click)="handlelogOut()">
+      <mat-icon>input</mat-icon> {{user?.fullName}}
+    </button>
+</mat-toolbar>

@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 400px;
+    background-color: rgb(63, 0, 3);
+    color: #ffffff;
+    
+  }
+  mat-card-subtitle{
+    color: #929292;
+  }
+  .example-header-image {
+    background-image: url('https://img.freepik.com/vecteurs-libre/modele-logo-aliments-sains-dessines-main_23-2149653126.jpg?t=st=1735846899~exp=1735850499~hmac=62ab3b13eb95c945f19fafcfe806cd012156eb44eb337ebcb6be515c47a9a1f6&w=740');
+    background-size: cover;
+  }
+  .imageCard{
+    height: 400px;
+    width: 400px;
+  }
+  button.liked mat-icon {
+    color: red;
+  }
+
