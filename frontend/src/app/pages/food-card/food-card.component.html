@@ -1,0 +1,28 @@
+<mat-card   class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{food.user?.fullName}}</mat-card-title>
+      <mat-card-subtitle>{{food?.title}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="imageCard" [src]="food.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p style="padding-top: 5px;">
+        {{food.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="justify-between">
+      <div>
+<!--        <button mat-icon-button (click)="handleLike()" [color]="isLikedByUser() ? 'warn' : 'primary'">
+          <mat-icon>{{ isLikedByUser() ? 'favorite' : 'favorite_border' }}</mat-icon>
+        </button>-->
+      </div>
+      <div class="iconeManage">
+          <button (click)="openDialogUpdateForm()" mat-icon-button aria-label="icon edite">
+          <mat-icon>edite</mat-icon>
+        </button>
+        <button (click)="handleDelete()" mat-icon-button aria-label="icon delete">
+          <mat-icon style="color: rgb(255, 197, 166);" >delete</mat-icon>
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card>

@@ -1,0 +1,80 @@
+<div class="flex justify-center h-screen items-center overflow-hidden w-screen">
+    <div class="container">
+        <div class="cover" [ngClass]="{'route-active': isRegistry}">
+            <div class="front">
+            
+                <img src="https://images.pexels.com/photos/28927291/pexels-photo-28927291/free-photo-of-un-boulanger-a-domicile-prepare-une-pate-a-brownie-au-chocolat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="loginPicture">
+                <div class="text">
+                    <span class="text-1">
+                        Share, Savor, and Create : Your Recipe Haven Awaits!
+                    </span>
+                    <span class="text-2">let's get connected</span>
+                </div>
+            </div>
+            <div class="back">
+                <img src="https://images.pexels.com/photos/28927292/pexels-photo-28927292/free-photo-of-personne-fouettant-la-pate-au-chocolat-dans-la-cuisine.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="logupPicture">
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="signup-form">
+                    <div class="title">Signup</div>
+                    <form [formGroup]="RegisterForm" (ngSubmit)="handelRegister()">
+                        <div class="input-boxes">
+                            <div class="input-box" >
+                                <mat-form-field >
+                                    <mat-label>Full Name</mat-label>
+                                    <input formControlName = "fullName"
+                                    matInput placeholder="Write full name" />
+                                  </mat-form-field>
+                            </div>
+                            <div class="input-box">
+                                <mat-form-field>
+                                    <mat-label>Email</mat-label>
+                                    <input formControlName = "email"
+                                    matInput placeholder="Write email"/>
+                                  </mat-form-field>
+                            </div>
+                            <div class="input-box">
+                                <mat-form-field >
+                                    <mat-label>Password</mat-label>
+                                    <input formControlName = "password"
+                                    matInput placeholder="Write password"/>
+                                  </mat-form-field>
+                            </div>
+                            <button mat-raised-button color="primary" type="submit">signup</button>
+                            <div class="text sign-up-text">Already have an account? <label (click)="togglePanel()" for="route-active">Login now</label></div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    <form [formGroup]="loginForm" (ngSubmit)="handelLogin()">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <mat-form-field >
+                                    <mat-label>Username</mat-label>
+                                    <input formControlName = "email"
+                                    matInput placeholder="Write username"/>
+                                  </mat-form-field>
+                            </div>
+                            <div class="input-box">
+                                <mat-form-field >
+                                    <mat-label>Password</mat-label>
+                                    <input formControlName = "password"
+                                    matInput placeholder="Write password"/>
+                                  </mat-form-field>
+                            </div>
+                            <button mat-raised-button color="primary" type="submit">Login</button>
+                            <div class="text sign-up-text">Don't have an account? <label (click)="togglePanel()" for="route-active">Sigup now</label></div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+background-image:url("https://img.freepik.com/premium-photo/flowing-lines-abstract-wave-background-futuristic-technology-concept-black-background_620202-4133.jpg?uid=R38076636&ga=GA1.1.1927953074.1732986113&semt=ais_hybrid&w=740");
+background-repeat: initial;
+background-position: top;
+background-color: rgb(253, 255, 247);
+
+background-size: cover;
+color : white;}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

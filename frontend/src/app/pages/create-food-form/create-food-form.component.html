@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Title</mat-label>
+            <input [(ngModel)]="foodItem.title"
+            matInput placeholder="Write title" value="" name="title"/>
+          </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Description</mat-label>
+            <input [(ngModel)]="foodItem.description"
+            matInput placeholder="Write description" value="" name="description"/>
+          </mat-form-field>
+    </div>
+
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Image</mat-label>
+            <input [(ngModel)]="foodItem.image"
+            matInput placeholder="Write image url" value="" name="image"/>
+          </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-radio-group name="foodType" [(ngModel)]="foodItem.foodType" aria-label="Select an option">
+            <mat-radio-button value="veg">Vegetarain</mat-radio-button>
+            <mat-radio-button value="non_veg">Non Vegetarian</mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <button mat-raised-button color="primary" type="submit">Create</button>
+</form>
